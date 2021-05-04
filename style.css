@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 10vh 85vh 5vh;
+}
+header{
+    font: bolder 5vh/10vh serif;
+    text-align: center;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+footer{
+    font: bolder 2vh/5vh serif;
+    text-align: center;
+}
+.map,.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
