@@ -22,8 +22,23 @@ footer{
     font: bolder 2vh/5vh serif;
     text-align: center;
 }
-.map,.info{
+.map{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+svg path:hover{
+    fill: rgb(77, 63, 63);
+}
+object{
+    margin-top: 20px;
+
+}
+
 
