@@ -16,7 +16,7 @@ header{
 }
 main{
     display: grid;
-    grid-template-columns: 45vw 5vw;
+    grid-template-columns: 45vw 45vw;
     justify-content: center;
 
 }
@@ -38,6 +38,7 @@ footer{
 }
 svg path:hover{
     fill: rgb(77, 63, 63);
+    
 }
 object{
     height: 100%; 
@@ -60,17 +61,18 @@ object{
     margin-bottom: 5vh;
 }
 .card{
-    height: 10vh;
+    height: 15vh;
     width: 20vw;
     text-align: center;
     color: white;
     margin-bottom: 3vh;
+    transition: transform 250ms;
 }
 .suspeitos,.confirmados,.mortes{
     background-color: teal;
 }
 .card:hover{
-    background-color: indianred;
+    transform: translateY(-10px);
 }
 .numeros{
     display: flex;
