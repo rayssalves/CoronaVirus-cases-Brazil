@@ -25,7 +25,8 @@ footer{
 .map{
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+     
 }
 
 .info{
@@ -37,8 +38,8 @@ svg path:hover{
     fill: rgb(77, 63, 63);
 }
 object{
-    margin-top: 20px;
-
+    height: 100%; 
+    width: 100%;
 }
 
 
