@@ -7,7 +7,7 @@
 
 body{
     display: grid;
-    grid-template-rows: 10vh 85vh 5vh;
+
 }
 header{
     font: bolder 5vh/10vh serif;
@@ -23,12 +23,12 @@ main{
 footer{
     font: bolder 2vh/5vh serif;
     text-align: center;
+    background-color: rgba(216, 191, 216, 0.192);
 }
 .map{
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: center;
-     
+    align-items: center;   
 }
 
 .info{
@@ -39,22 +39,31 @@ footer{
 svg path:hover{
     fill: rgb(77, 63, 63);
     
+    
 }
 object{
-    height: 100%; 
-    width: 100%;
+    height: 1000px;;
+    width: 1000px;
+    display: block;
+    position: relative;
+    left: 65%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-top: 20px;
 }
 
 .info{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    justify-content: right;
     align-items: center;
     font-size: 30px;
+    margin-top: -200px;
+    
 }
 .estado{
     background-color: #7c7c7c ;
-    color: white;
+    color: black;
     text-align: center;
     font: bolder 4vh/10vh serif;
     height: 10vh;
@@ -64,9 +73,10 @@ object{
     height: 15vh;
     width: 20vw;
     text-align: center;
-    color: white;
+    color:black;
     margin-bottom: 3vh;
     transition: transform 250ms;
+    box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.342);
 }
 .suspeitos,.confirmados,.mortes{
     background-color: teal;
