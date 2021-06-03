@@ -1,6 +1,24 @@
+  /*dá pra criar variaveis p/ as cores no sass. 
+    $purple: cor */
+@mixin flx ($property, $jty-cnt){
+    display:flex;
+    #{$property}:$jty-cnt;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 797.98px) {@content;}
+}
+
+@mixin for-tablet-only {
+    @media (min-width:768px) and (max-width: 1199.98px) {@content;}
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px) {@content;}
+    }
+
 body{
     display: grid;
-
 }
 header{
     font: bolder 5vh/10vh serif;
