@@ -1,0 +1,142 @@
+@mixin reset-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+@mixin header-style {
+    font: bolder 3vh/8vh serif;
+    text-align: center;
+    background-color: rgba(144, 238, 144, 0.781);
+}
+@mixin flx ($property, $jty-cnt){
+    display:flex;
+    #{$property}:$jty-cnt;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 797.98px) {@content;}
+}
+
+@mixin for-tablet-only {
+    @media (min-width:768px) and (max-width: 1199.98px) {@content;}
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px) {@content;}
+    }
+
+body{
+    display: grid;
+    @include reset-list()
+}
+header{
+    @include header-style()
+}
+main{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    justify-content: center;
+    background-color:rgba(144, 238, 144, 0.342);
+    @include for-phone-only(){
+        grid-template-columns: 100vw;
+    }
+
+}
+footer{
+    font: bolder 2vh/5vh serif;
+    text-align: center;
+    background-color: rgba(144, 238, 144, 0.781);
+    @include for-phone-only(){
+        position: unset;
+        bottom: 0;
+    }
+}
+.map{
+    display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%; 
+	vertical-align: middle; 
+	overflow: hidden; 
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+svg path:hover{
+    fill: rgb(77, 63, 63);
+
+}
+object{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include for-phone-only {
+        transform: scale(0.9);
+        justify-content: center;
+        align-items: center;   
+}
+}
+.info{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 5px;  
+    @include for-phone-only(){
+        transform: scale(0.7);
+        position: unset;
+        bottom: 0 !important;
+        font-size: 10px;
+    }
+}
+.estado{
+    background-color: #7c7c7c ;
+    color: black;
+    text-align: center;
+    font: bolder 4vh/10vh serif;
+    height: 10vh;
+    margin-bottom: 5vh;
+}
+.card{
+    height: 13vh;
+    width: 18vw;
+    text-align: center;
+    color:black;
+    margin-bottom: 3vh;
+    transition: transform 250ms;
+    box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.342);
+    @include for-phone-only(){
+        height: 10vh;
+        width: 42vw; 
+    }
+}
+.suspeitos,.confirmados,.mortes{
+    background-color: teal;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.numeros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: bolder 5vh serif;
+    @include for-phone-only(){
+        font: bolder 3vh serif;
+    }
+}
+.titulos{
+    font: bolder 3vh/5vh serif;
+}
+
+#meu-svg {
+    transform: scale(0.9);
+}
+
+
+    
+
