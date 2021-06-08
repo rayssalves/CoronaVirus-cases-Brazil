@@ -1,16 +1,19 @@
 body {
   display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 header {
-  font: bolder 5vh/10vh serif;
+  font: bolder 3vh/8vh serif;
   text-align: center;
   background-color: rgba(216, 191, 216, 0.192);
 }
 
 main {
   display: grid;
-  grid-template-columns: 45vw 45vw;
+  grid-template-columns: 50vw 50vw;
   justify-content: center;
 }
 
@@ -19,11 +22,20 @@ footer {
   text-align: center;
   background-color: rgba(216, 191, 216, 0.192);
 }
+@media (max-width: 797.98px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
 
 .map {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
 }
 
 .info {
@@ -37,22 +49,33 @@ svg path:hover {
 }
 
 object {
-  height: 1000px;
-  width: 900px;
-  display: block;
-  position: relative;
-  left: 65%;
-  -webkit-transform: translateX(-30%);
-  transform: translateX(-55%);
-  margin-top: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 797.98px) {
+  object {
+    transform: scale(0.9);
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .info {
   display: grid;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
-  font-size: 30px;
-  margin-top: -200px;
+  font-size: 25px;
+  margin-top: 5px;
+}
+@media (max-width: 797.98px) {
+  .info {
+    transform: scale(0.7);
+    position: absolute;
+    bottom: 0 !important;
+    font-size: 10px;
+  }
 }
 
 .estado {
@@ -63,15 +86,26 @@ object {
   height: 10vh;
   margin-bottom: 5vh;
 }
+@media (max-width: 797.98px) {
+  .estado {
+    justify-content: center;
+  }
+}
 
 .card {
-  height: 15vh;
-  width: 20vw;
+  height: 13vh;
+  width: 18vw;
   text-align: center;
   color: black;
   margin-bottom: 3vh;
   transition: transform 250ms;
   box-shadow: 5px 5px 3px 2px rgba(0, 0, 0, 0.342);
+}
+@media (max-width: 797.98px) {
+  .card {
+    height: 10vh;
+    width: 42vw;
+  }
 }
 
 .suspeitos, .confirmados, .mortes {
@@ -88,9 +122,18 @@ object {
   align-items: center;
   font: bolder 5vh serif;
 }
+@media (max-width: 797.98px) {
+  .numeros {
+    font: bolder 3vh serif;
+  }
+}
 
 .titulos {
   font: bolder 3vh/5vh serif;
 }
 
+#meu-svg {
+  transform: scale(0.9);
+}
 
+/*# sourceMappingURL=style.css.map */
