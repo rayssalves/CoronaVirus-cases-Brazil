@@ -8,23 +8,29 @@ body {
 header {
   font: bolder 3vh/8vh serif;
   text-align: center;
-  background-color: rgba(216, 191, 216, 0.192);
+  background-color: rgba(144, 238, 144, 0.781);
 }
 
 main {
   display: grid;
   grid-template-columns: 50vw 50vw;
   justify-content: center;
+  background-color: rgba(144, 238, 144, 0.342);
+}
+@media (max-width: 797.98px) {
+  main {
+    grid-template-columns: 100vw;
+  }
 }
 
 footer {
   font: bolder 2vh/5vh serif;
   text-align: center;
-  background-color: rgba(216, 191, 216, 0.192);
+  background-color: rgba(144, 238, 144, 0.781);
 }
 @media (max-width: 797.98px) {
   footer {
-    position: absolute;
+    position: unset;
     bottom: 0;
   }
 }
@@ -72,7 +78,7 @@ object {
 @media (max-width: 797.98px) {
   .info {
     transform: scale(0.7);
-    position: absolute;
+    position: unset;
     bottom: 0 !important;
     font-size: 10px;
   }
@@ -85,11 +91,6 @@ object {
   font: bolder 4vh/10vh serif;
   height: 10vh;
   margin-bottom: 5vh;
-}
-@media (max-width: 797.98px) {
-  .estado {
-    justify-content: center;
-  }
 }
 
 .card {

@@ -7,7 +7,7 @@
 @mixin header-style {
     font: bolder 3vh/8vh serif;
     text-align: center;
-    background-color: rgba(216, 191, 216, 0.192);
+    background-color: rgba(144, 238, 144, 0.781);
 }
 @mixin flx ($property, $jty-cnt){
     display:flex;
@@ -37,14 +37,18 @@ main{
     display: grid;
     grid-template-columns: 50vw 50vw;
     justify-content: center;
+    background-color:rgba(144, 238, 144, 0.342);
+    @include for-phone-only(){
+        grid-template-columns: 100vw;
+    }
 
 }
 footer{
     font: bolder 2vh/5vh serif;
     text-align: center;
-    background-color: rgba(216, 191, 216, 0.192);
+    background-color: rgba(144, 238, 144, 0.781);
     @include for-phone-only(){
-        position: absolute;
+        position: unset;
         bottom: 0;
     }
 }
@@ -84,7 +88,7 @@ object{
     margin-top: 5px;  
     @include for-phone-only(){
         transform: scale(0.7);
-        position: absolute;
+        position: unset;
         bottom: 0 !important;
         font-size: 10px;
     }
@@ -96,9 +100,6 @@ object{
     font: bolder 4vh/10vh serif;
     height: 10vh;
     margin-bottom: 5vh;
-    @include for-phone-only(){
-        justify-content: center;
-    }
 }
 .card{
     height: 13vh;
